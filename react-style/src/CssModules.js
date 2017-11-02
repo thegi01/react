@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './DashedBox.css';
+import styles from './CssModules.css';
 
 const DashedBox = () => (
   <div className={styles.container}>

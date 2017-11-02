@@ -1,5 +1,5 @@
 import React from 'react';
-import './DottedBox.css';
+import './CssStylesheet.css';
 
 const DottedBox = () => (
   <div className="DottedBox">
