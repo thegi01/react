@@ -3,7 +3,6 @@ import './App.css';
 
 import IntroducingJSX from './IntroducingJSX';
 import ComponentsAndProps from './ComponentsAndProps';
-import Clock from './Clock';
 
 class App extends Component {
   render() {
@@ -20,9 +19,6 @@ class App extends Component {
             <ComponentsAndProps />
 
             <h3>State and Lifecycle</h3>
-            <Clock />
-
-
             
         </div>
       </div>
