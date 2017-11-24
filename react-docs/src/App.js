@@ -14,9 +14,18 @@ import Greeting from'./Greeting';
 import LoginControl from'./LoginControl';
 import MailBox from'./MailBox';
 
+import NumberList from'./NumberList';
+import Blog from'./Blog';
+
 class App extends Component {
   render() {
+
     const messages = ['React', 'Re: React', 'Re:Re: React'];
+
+    const posts = [
+        {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+        {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+    ];
     
     return (
       <div className="App">
@@ -71,6 +80,20 @@ class App extends Component {
                     <MailBox unreadMessage={messages} />
 
                     <h3>D. Inline If-Else with Conditional Operator</h3>
+                </div>
+            </section>
+
+            <section className="compnt">
+                <div className="compnt-header">
+                    <h2>List and Key</h2>
+                </div>
+                <div className="compnt-body">
+                    <h3>NumberList</h3>
+                    <NumberList numbers={[1, 2, 3, 4, 5]} />
+
+                    <h3>Blog</h3>
+                    <p>Keys Must Only Be Unique Among Siblings</p>
+                    <Blog posts={posts} />
                 </div>
             </section>
 
