@@ -5,7 +5,7 @@ class IntroducingJsx extends Component {
     render(){
 
         const element1 = <h1>React Docs</h1>
-    
+    /*
         const element2 = (
             <h1 className="greeting">
                 React Docs
@@ -26,7 +26,7 @@ class IntroducingJsx extends Component {
                 children: 'React Docs'
             }
         }
-        
+        */
         return (
            <div>
                {element1}

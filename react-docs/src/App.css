@@ -26,18 +26,45 @@
 }
 
 .App-content {
-  padding: 20px;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0; padding: 0;
+}
+
+.compnt {
+  margin-bottom: 4rem ;
+}
+
+.compnt-header {
+  padding: 1rem;
+  background-color: #aaa;
+  color: #fff;
+}
+.compnt-body {
+  padding: 1rem;
 }
 
 
-h2 {
-    margin-top: 100px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-}
+
 
 h3 {
-  margin-top: 50px;
-  padding: 15px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: solid 1px #ddd;
   background-color: #f8f8f8;
+}
+h3 {
+  margin-top: 3rem;
+}
+
+h4 {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+div, p {
+  font-size: 16px;
 }
