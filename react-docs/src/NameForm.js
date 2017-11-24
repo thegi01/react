@@ -7,32 +7,24 @@ class NameForm extends React.Component {
 
         this.state = {
             value : '',
-            name : ''
+            isShow : false
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(e){
-      /*  this.setState(prevState => {
-            value : prevState + e.target.value
-        });*/
+    handleChange(event){
         this.setState({
-            name : this.state.value
+            value : event.target.value,
+            isShow: false
         });
     }
-    handleSubmit(e){
-        e.preventDefault();
+    handleSubmit(event){
+        event.preventDefault();
         this.setState({
-            name: this.state.value
-        }, function(){
-            this.setState({
-                value: ''
-            })
-            console.log('handleSubmit', this.state)
+            isShow: true
         });
-       
     }
     
     render(){
@@ -43,6 +35,9 @@ class NameForm extends React.Component {
                     <input type="text" name="name" onChange={this.handleChange} />
                 </label>
                 <input type="submit" value="Submit" />
+                { this.state.isShow &&
+                    <p>Your Name : {this.state.value}</p>
+                }
             </form>
         );
     }
