@@ -18,6 +18,7 @@ import NumberList from'./NumberList';
 import Blog from'./Blog';
 
 import NameForm from'./NameForm';
+import EssayForm from'./EssayForm';
 
 
 class App extends Component {
@@ -107,8 +108,13 @@ class App extends Component {
                 <div className="compnt-body">
                     <h3>Controlled Components</h3>
                     <NameForm />
+                    <h3>The textarea Tag</h3>
+                    <EssayForm />
                 </div>
             </section>
+
+
+
 
             <section className="compnt">
                 <div className="compnt-header">
