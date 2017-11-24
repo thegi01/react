@@ -17,6 +17,9 @@ import MailBox from'./MailBox';
 import NumberList from'./NumberList';
 import Blog from'./Blog';
 
+import NameForm from'./NameForm';
+
+
 class App extends Component {
   render() {
 
@@ -99,6 +102,16 @@ class App extends Component {
 
             <section className="compnt">
                 <div className="compnt-header">
+                    <h2>Forms</h2>
+                </div>
+                <div className="compnt-body">
+                    <h3>Controlled Components</h3>
+                    <NameForm />
+                </div>
+            </section>
+
+            <section className="compnt">
+                <div className="compnt-header">
                     <h2>Example</h2>
                 </div>
                 <div className="compnt-body">
@@ -106,8 +119,6 @@ class App extends Component {
                     <Todo />
                 </div>
             </section>
-
-            
             
         </div>
       </div>
