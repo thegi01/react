@@ -19,6 +19,7 @@ import Blog from'./Blog';
 
 import NameForm from'./NameForm';
 import EssayForm from'./EssayForm';
+import FlavorForm from'./FlavorForm';
 
 
 class App extends Component {
@@ -102,14 +103,22 @@ class App extends Component {
             </section>
 
             <section className="compnt">
+
                 <div className="compnt-header">
                     <h2>Forms</h2>
                 </div>
+
                 <div className="compnt-body">
+
                     <h3>Controlled Components</h3>
                     <NameForm />
+
                     <h3>The textarea Tag</h3>
                     <EssayForm />
+
+                    <h3>The select Tag</h3>
+                    <FlavorForm />
+
                 </div>
             </section>
 
