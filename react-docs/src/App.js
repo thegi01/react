@@ -30,6 +30,9 @@ import WelcomeDailog from'./WelcomeDailog';
 import SplitPane from'./SplitPane';
 import Contacts from'./Contacts';
 import Chat from'./Chat';
+import WelcomeDailog2 from'./WelcomeDailog2';
+import SignUpDialog from'./SignUpDialog';
+
 
 
 class App extends Component {
@@ -165,6 +168,11 @@ class App extends Component {
                         left={ <Contacts /> }
                         right={ <Chat /> }
                     />
+
+                    <h3>Specialization</h3>
+                    <WelcomeDailog2 />
+
+                    <SignUpDialog />
 
                 </div>
             </section>
