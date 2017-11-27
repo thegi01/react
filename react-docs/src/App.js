@@ -26,6 +26,11 @@ import Calculator from'./Calculator';
 import Calculator2 from'./Calculator2';
 import Calculator3 from'./Calculator3';
 
+import WelcomeDailog from'./WelcomeDailog';
+import SplitPane from'./SplitPane';
+import Contacts from'./Contacts';
+import Chat from'./Chat';
+
 
 class App extends Component {
   render() {
@@ -143,6 +148,23 @@ class App extends Component {
 
                     <h3>Writing Conversion Functions, Lifting State Up</h3>
                     <Calculator3 />
+                </div>
+            </section>
+
+            <section className="compnt">
+                <div className="compnt-header">
+                    <h2>Composition vs Inheritance</h2>
+                </div>
+                <div className="compnt-body">
+
+                    <h3>Containment</h3>
+                    <WelcomeDailog />
+
+                    <h4>Multiple Component(hole) -> come up with your own convention </h4>
+                    <SplitPane 
+                        left={ <Contacts /> }
+                        right={ <Chat /> }
+                    />
 
                 </div>
             </section>
