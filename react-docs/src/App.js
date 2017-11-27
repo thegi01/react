@@ -23,6 +23,7 @@ import FlavorForm from'./FlavorForm';
 import Reservation from'./Reservation';
 
 import Calculator from'./Calculator';
+import Calculator2 from'./Calculator2';
 
 
 class App extends Component {
@@ -133,7 +134,11 @@ class App extends Component {
                     <h2>Lifting State Up</h2>
                 </div>
                 <div className="compnt-body">
+                    <h3>Calculator</h3>
                     <Calculator />
+
+                    <h3>Adding a Second Input</h3>
+                    <Calculator2 />
                 </div>
             </section>
 
