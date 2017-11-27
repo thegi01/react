@@ -22,6 +22,8 @@ import EssayForm from'./EssayForm';
 import FlavorForm from'./FlavorForm';
 import Reservation from'./Reservation';
 
+import Calculator from'./Calculator';
+
 
 class App extends Component {
   render() {
@@ -123,8 +125,15 @@ class App extends Component {
                     <h3>Handling Multiple Inputs</h3>
                     <Reservation />
 
-                    <h3>Controlled Input Null Value</h3>
+                </div>
+            </section>
 
+            <section className="compnt">
+                <div className="compnt-header">
+                    <h2>Lifting State Up</h2>
+                </div>
+                <div className="compnt-body">
+                    <Calculator />
                 </div>
             </section>
 
