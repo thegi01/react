@@ -72,8 +72,14 @@ h4:before {
   width: 5px; height: 15px;
   margin-right: 10px;
   background-color: #afc3b9;
+}
 
+h5 {
 
+}
+
+h6 {
+  font-size: 16px;
 }
 
 div, p {

@@ -20,6 +20,7 @@ import Blog from'./Blog';
 import NameForm from'./NameForm';
 import EssayForm from'./EssayForm';
 import FlavorForm from'./FlavorForm';
+import Reservation from'./Reservation';
 
 
 class App extends Component {
@@ -118,6 +119,11 @@ class App extends Component {
 
                     <h3>The select Tag</h3>
                     <FlavorForm />
+
+                    <h3>Handling Multiple Inputs</h3>
+                    <Reservation />
+
+                    <h3>Controlled Input Null Value</h3>
 
                 </div>
             </section>
