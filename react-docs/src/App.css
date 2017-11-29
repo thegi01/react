@@ -1,31 +1,36 @@
-.App {
+@charset "UTF-8";
+/* Reset */
+body {word-wrap: break-word; word-break: break-all; -webkit-text-size-adjust: none; background-color: #fff; } ul, ol, li {list-style: none; } a {text-decoration: none; -webkit-touch-callout: none; -webkit-user-select: none; } img, fieldset, button, input {border: 0 none; } img, input, select, textarea {vertical-align: middle; } address, em {font-style: normal; } input:focus {/*outline: 0*/ } input {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; } input[type="text"], input[type="search"], input[type="submit"], input[type="select"] {-webkit-appearance: none; -moz-appearance: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } input:checked[type="checkbox"] {/*-webkit-appearance: checkbox*/ } input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none; } hr {clear: both; height: 0; border: 0; overflow: hidden; } /* margin */ html, body, p, div, span, blockquote, pre, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, th, td, form, fieldset, legend, input, textarea, button, select, section, article, header, footer, main, nav, figure {margin: 0; padding: 0; }
+
+
+.app {
     color: #333;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.app-logo {
+  animation: app-logo-spin infinite 20s linear;
 }
 
-.App-header {
+.app-header {
   background-color: #222;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+.app-title {
   font-size: 1.5em;
 }
 
-.App-intro {
+.app-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+@keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-.App-content {
+.app-content {
   padding: 1rem;
 }
 
@@ -58,7 +63,10 @@ h3 {
   font-size: 16px; line-height: 1;
 }
 h3 {
-  margin-top: 3rem;
+    margin-top: 1rem;
+}
+h3:first-child {
+    margin-top: 0;
 }
 
 h4 {
@@ -84,4 +92,62 @@ h6 {
 
 div, p {
   font-size: 16px;
+}
+
+
+.nav {
+    position: absolute; top: 0; left: 0; 
+    width: 100%;
+}
+.nav .button {
+    display: block;
+    position: relative;
+    width: 100%; height: 40px;
+    border: none 0;
+    background-color: #000; color: #fff;
+    text-align: center; vertical-align: middle;
+    line-height: 40px;
+}
+.nav .button input {
+  position: absolute; left: 0;
+  opacity: 0;
+}
+.nav .button h1 {
+    font-size: 20px;
+}
+.menu {
+    position: fixed; top: 40px; left: 0; right: 0; bottom: 0; z-index: 200;
+    padding: 10px 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    line-height: 1.8;
+}
+.menu h2 {
+    margin-bottom: 10px;
+}
+.menu ul {
+    margin: 0;
+    padding-left: 10px;
+}
+.menu ul li:before {
+    content: '- ';
+    display: inline-block;
+    margin-right: 5px;
+    /*width: 3px; height: 13px;*/
+    /*background-color: gray;*/
+}
+.menu[data-hidden="true"]{
+  display: none;
+}
+.menu a {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+.menu a:hover {
+    color: #6d6d6d;
+}
+
+.body {
+    position: relative; top: 40px;
+    padding: 12px;
 }
