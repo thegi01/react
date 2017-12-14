@@ -13,6 +13,7 @@ const Menu = () => {
                 <li><NavLink exact to='/about' activeStyle={activeStyle}>About</NavLink></li>
                 <li><NavLink to='/about/stanger' activeStyle={activeStyle}>About stanger</NavLink></li>
                 <li><NavLink to='/about/stanger?detail=true' activeStyle={activeStyle}>About stanger?detail=true</NavLink></li>
+                <li><NavLink to='/posts' activeStyle={activeStyle}>Posts</NavLink></li>
             </ul>
             <hr/>
         </div>
