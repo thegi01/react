@@ -21,35 +21,49 @@ class App extends React.Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleDimmedClick = this.handleDimmedClick.bind(this);
         this.state = {
-            isHidden : true            
+            isSideNavHidden : true,
+            isDimmedHidden : true        
         }
     }
 
     handleChange(event){
         this.setState({
-            isHidden : event.target.checked
+            isSideNavHidden : event.target.checked,
+            isDimmedHidden : event.target.checked
         });
     }
 
     handleClick(){
         this.setState({
-            isHidden : true
+            isSideNavHidden : true,
+            isDimmedHidden : true
+        });
+    }
+    handleDimmedClick(){
+        this.setState({
+            isSideNavHidden : true,
+            isDimmedHidden : true
         });
     }
 
     render(){
         return(
             <Router>
-                <div className="app">
+                <div className="app"> 
 
-                    <nav className="nav">
-                        <label className="button">
-                            <input type="checkbox" checked={this.state.isHidden} onChange={this.handleChange} />
-                            <h1>React Docs</h1>
+                    <header className="header">
+                        <h1 className="h1">React Docs</h1>
+                        <label className="button-hamburger">
+                            <input type="checkbox" checked={this.state.isSideNavHidden} onChange={this.handleChange} />
+                            <span>=</span>
                         </label>
-                        <section className="menu" data-hidden={this.state.isHidden}>
-                            <h2>Quick Start</h2>
+                    </header>
+
+                    <nav className="side-nav" data-hidden={this.state.isSideNavHidden}>
+                        <section className="menu">
+                            <h2 className="__title">Quick Start</h2>
                             <ul onClick={this.handleClick}>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/introducingjsx">IntroducingJSX</Link></li>
@@ -79,6 +93,8 @@ class App extends React.Component {
                         <Route path="/compositionvsinheritance" component={CompositionVsInheritance} />
                         <Route path="/thinkinginreact" component={ThinkingInReact} />
                     </div>
+
+                    <div className="dimmed" data-hidden={this.state.isDimmedHidden} onClick={this.handleDimmedClick}></div>
 
                 </div>
             </Router>
