@@ -1,27 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './index.css';
-import App from './App';
-// import Main from './Main';
+import { Router, Route, Link, IndexRoute, browserHistory, hashHistory} from 'react-router';
 import registerServiceWorker from './registerServiceWorker';
 
+// import { HashRouter, Route, Switch  } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-/*ReactDOM.render(
-    <Router history = {browserHistory} >
-        <Route path="/" component={App}>
-            <IndexRoute component={App} />
-            <Route path="todo" component={Todo} />
+import './App.css';
+
+import Page from './Page';
+import Home from './Home';
+import ComponentsAndProps from './ComponentsAndProps';
+
+ReactDOM.render((
+    <Router >
+        <Route path = "/" component = {Page}>
+            <IndexRoute component = {Home} />
+            <Route path="/componentsandprops" component={ComponentsAndProps} />
         </Route>
-    </Router>, 
-    document.getElementById('root'));*/
+    </Router>
+    ), document.getElementById('root') );
 
-
-/*render((
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-), document.getElementById('root'));
-*/
 registerServiceWorker();
